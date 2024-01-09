@@ -1,21 +1,27 @@
 html {
     padding:0;
     margin:0;
+    line-height: 2.8rem;
 }
 a {
     cursor: pointer;
+}
+.text__center {
+    text-align: center;
 }
 .p__15 {
     padding:15px;
 }
 .button {
-    border:none;
+    background-color: white;
+    border:2px solid black;
     min-height:30px; 
     min-width: 120px;
     padding:15px;
     border-radius: 20px;
     cursor: pointer;
     &:hover {
+        border:none;
         transition: 0.7s;
         color:white;
         background-color: gray;
@@ -29,18 +35,22 @@ img {
     clip-path: circle(50%);
     width: 500px;
     height: 500px;
-    opacity: 0.8;
 }
 body {
     padding: 0;
     margin: 0 ;
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    color: #A9A9A9;
 }
 .flex {
     display: flex;
     align-items: center;
+    
+}
+.flex__center {
+    justify-content: center;
+}
+.space__evenly {
     justify-content: space-evenly;
 }
 .row {
@@ -58,7 +68,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: all 3s;
-    color: #A9A9A9;
+    color: black;
     &:hover {
         color: #607274;
     }
