@@ -31,19 +31,22 @@ a {
 .gap1__2 {
     gap: $gap1rem;
 }
-.header {
-    height: 15vh;
-}
 .container {
     position: relative;
-    height: 100vh;
     margin:auto;
+}
+/*Header Section*/
+.header {
+    height: 15vh;
+    > h2 {
+        font-size: $fs-600;
+        font-weight: bold;
+    }
 }
 .navbar__hamburger {
     &__menu {
         display: none;
         position: absolute;
-        opacity: 0.9;
         background-color: #607274;
         z-index: 9999;
         top:0;
@@ -136,14 +139,14 @@ a {
     .navbar {
         display: none;
     }
-    .section {
+    .dashboard {
         display: flex;
         flex-direction: column;
     }
     img {
         clip-path: circle(50%);
-        width: 20rem;
-        height: 20rem;
+        width: 18rem;
+        height: 18rem;
     }
 }
  
@@ -164,7 +167,7 @@ a {
         width: 25rem;
         height: 25rem;
     }
-    .section {
+    .dashboard {
         display: flex;
         flex-direction: column;
     }
@@ -176,7 +179,11 @@ a {
     $fs-600: 3rem;
     $fs-400: 1.25rem;
     .navbar {
-        display: none;
+        display: block;
+
+        &__hamburger {
+            display: none;
+        }
     }
 }
  
