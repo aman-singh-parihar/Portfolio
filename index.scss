@@ -6,6 +6,24 @@ html {
 a {
     cursor: pointer;
 }
+@media (max-width: 700) {
+    .navbar {
+        display: none;
+    }
+    .section {
+        display: flex!;
+        flex-direction: column!;
+    }
+}
+@media (min-width: 701px) {
+    .navbar {
+        display: block;
+
+        &__hamburger {
+            display: none;
+        }
+    }
+}
 .text__center {
     text-align: center;
 }
@@ -93,5 +111,5 @@ body {
     padding:0;
     margin:0;
     list-style-type: none;
-    gap: 10rem;
+    gap: 8rem;
 }
