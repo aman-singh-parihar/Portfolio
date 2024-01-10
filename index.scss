@@ -1,26 +1,60 @@
-html {
+$gap1rem: 1rem;
+$gap1_2rem: 1.2rem;
+$gap1_8rem: 1.8rem;
+$gap2rem: 2rem;
+$fs-xl: 5rem;
+$fs-600: 2rem;
+$fs-400: 1rem;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, h1, h2, h3, h4, h5, h6, p {
     padding:0;
     margin:0;
-    line-height: 2.8rem;
+    font-size: $fs-400;
+    font-weight: 400 ;
+}
+img {
+    clip-path: circle(50%);
+    width: 25rem;
+    height: 25rem;
+}
+body {
+    padding: 0;
+    margin: 0 ;
+    font-size: $fs-400;
+    font-family: 'Roboto', sans-serif;
 }
 a {
     cursor: pointer;
 }
-@media (max-width: 700) {
-    .navbar {
-        display: none;
-    }
-    .section {
-        display: flex!;
-        flex-direction: column!;
-    }
+.gap1__2 {
+    gap: $gap1rem;
 }
-@media (min-width: 701px) {
-    .navbar {
-        display: block;
-
-        &__hamburger {
-            display: none;
+.header {
+    height: 15vh;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    margin:auto;
+}
+.navbar__hamburger {
+    &__menu {
+        display: none;
+        position: absolute;
+        opacity: 0.9;
+        background-color: #607274;
+        z-index: 9999;
+        top:0;
+        width: 100%;
+        height: 100%;
+        ul > li {
+            padding: 2rem 0;
+        }
+        > a {
+            right: 0;
+            position: absolute;
         }
     }
 }
@@ -40,44 +74,29 @@ a {
     cursor: pointer;
     &:hover {
         border:none;
-        transition: 0.7s;
+        transition: background-color 0.5s;
         color:white;
         background-color: gray;
     }
 }
-h1, h2, h3, h4, h5, h6, p {
-    padding: 0;
-    margin:0;
-}
-img {
-    clip-path: circle(50%);
-    width: 500px;
-    height: 500px;
-}
-body {
-    padding: 0;
-    margin: 0 ;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-}
+
 .flex {
     display: flex;
     align-items: center;
-    
 }
 .flex__center {
     justify-content: center;
 }
-.space__evenly {
+.flex__evenly {
     justify-content: space-evenly;
+}
+.flex__around {
+    justify-content: space-around;
 }
 .row {
     flex-direction: row;
-    row-gap: 10px;
 }
-.header {
-    height: 15vh;
-}
+
 .column {
     flex-direction: column;
 }
@@ -85,10 +104,10 @@ body {
     position: relative;
     cursor: pointer;
     text-decoration: none;
-    transition: all 3s;
     color: black;
     &:hover {
         color: #607274;
+        transition: color 3s;
     }
     &::after {
         position:absolute;
@@ -99,10 +118,10 @@ body {
         left:0;
         bottom:-10px;
         opacity: 0;
-        transition: all 3s;
         pointer-events: none;
     }
     &:hover::after{
+        transition: opacity 3s;
         opacity: 1;
     }
 }
@@ -111,5 +130,80 @@ body {
     padding:0;
     margin:0;
     list-style-type: none;
-    gap: 8rem;
+}
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        clip-path: circle(50%);
+        width: 20rem;
+        height: 20rem;
+    }
+}
+ 
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    $fs-xl: 7rem;
+    $fs-600: 3rem;
+    $fs-400: 1.25rem;
+    .navbar {
+        display: block;
+
+        &__hamburger {
+            display: none;
+        }
+    }
+    img {
+        clip-path: circle(50%);
+        width: 25rem;
+        height: 25rem;
+    }
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+ 
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    $fs-xl: 7rem;
+    $fs-600: 3rem;
+    $fs-400: 1.25rem;
+    .navbar {
+        display: none;
+    }
+}
+ 
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+    $fs-xl: 7rem;
+    $fs-600: 3rem;
+    $fs-400: 1.25rem;
+    .navbar {
+        display: block;
+
+        &__hamburger {
+            display: none;
+        }
+    }
+}
+ 
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    $fs-xl: 8rem;
+    $fs-600: 4rem;
+    $fs-400: 2rem;
+    .navbar {
+        display: block;
+
+        &__hamburger {
+            display: none;
+        }
+    }
 }
