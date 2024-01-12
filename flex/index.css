@@ -1,0 +1,22 @@
+.parent {
+    display: flex;
+}
+.child1, .child2, .child3 {
+    /* flex-grow: 1; */
+}
+.child1 {
+    background-color: #0074d9;
+    padding: 20px;
+    color: white;
+}
+.child2 {
+    background-color: #00f4f7;
+    padding: 20px;
+    color: white;
+}
+
+.child3 {
+    background-color: #00d4f7;
+    padding: 20px;
+    color: white;
+}

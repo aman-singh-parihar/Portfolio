@@ -13,6 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -24,13 +27,13 @@
 <body>
     <div class="container">
         <header class="header flex row flex__evenly">
-            <h2>Aman Singh Parihar</h2>
+            <h2 class="header__logo">Aman Singh Parihar</h2>
             <nav class="navbar__hamburger">
                 <a onclick="Show()"><i class="fa-solid fa-bars"></i></a>
             </nav>
-            <nav id="hamburger__menu" class="navbar__hamburger__menu">
+            <nav class="navbar__hamburger__menu" id="hamburger__menu" >
                 <a onclick="Hide()"><i class="fa-solid fa-xmark"></i></i></a>
-                <ul class="navbar__list flex column flex__center gap1__2">
+                <ul class="navbar__list flex column flex__center gap1">
                     <li class="navbar__item">
                         <a class="navbar__link" href="#">About</a>
                     </li>
@@ -45,8 +48,8 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="navbar">
-                <ul class="navbar__list flex row flex__center gap1__2">
+            <nav class="navbar__menu">
+                <ul class="navbar__list flex row flex__center gap1">
                     <li class="navbar__item">
                         <a class="navbar__link" href="#">About</a>
                     </li>
@@ -62,19 +65,19 @@
                 </ul>
             </nav>
         </header>
-        <section class="dashboard flex row flex__center gap1__2">
+        <section class="dashboard flex row flex__center gap1">
             <div>
-                <img src="img.jpg" alt="profile-picture" srcset="">
+                <img src="img.jpg" alt="profile-picture" srcset="" class="profile">
             </div>
             <div class="flex column space__evenly">
                 <div class="p__15">
-                    <h3 class="text__center">Hello, I'm</h3>
-                    <h2 class="text__center">Aman Singh Parihar</h2>
-                    <h1 class="text__center">Full Stack Engineer</h1>
+                    <h3 class="intro text__center">Hello, I'm</h3>
+                    <h2 class="title text__center">Aman Singh Parihar</h2>
+                    <h1 class="dashboard__designation text__center">Full Stack Engineer</h1>
                 </div>
                 <div class="p__15">
-                    <button class="button">Download Resume</button>
-                    <button class="button">Contact Info</button>
+                    <button class="button btn__resume">Download Resume</button>
+                    <button class="button btn__contact">Contact Info</button>
                 </div>
                 <div class="p__15">
                     <a><i class="fa-brands fa-linkedin fa-2xl"></i></i></a>
@@ -83,24 +86,189 @@
             </div>
 
         </section>
-        <h3 class="text__center">Get To Know More</h3>
-        <h1 class="text__center">About Me</h1>
+        <section class="about">
+            <h3 class="section_intro text__center">Get To Know More</h3>
+            <h1 class="title text__center">About Me</h1>
+            <div class="flex row flex__center gap2">
+                <img src="img.jpg" alt="" srcset="" class="about__profile__image">
+                <div class="flex column flex__center gap1 vw50">
+                    <div class="flex row flex__center gap1">
+                        <div class="card">
+                            <i class="fa-solid fa-medal"></i>
+                            <h2>Experience</h2>
+                            <p>7+ Years</p>
+                            <p>Full Stack Engineer</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-solid fa-users"></i>
+                            <h2>Education</h2>
+                            <p>B.E(CSE)</p>
+                        </div>
+                    </div>
 
-
-        <section class="about flex row flex__center gap1__2">
-
-            <img src="img.jpg" alt="" srcset="">
-            <div class="flex column flex__center gap1__2">
-                <div>
-                    <button class="button">Experience</button>
-                    <button class="button">Education</button>
+                    <div>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At iusto recusandae ducimus quasi,
+                            eligendi aut architecto cumque eius ipsam eveniet, cupiditate eum sequi veniam natus
+                            necessitatibus labore numquam harum repellat.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>TEST</h3>
+            </div>
+
+        </section>
+        <section class="experience">
+            <h3 class="text__center">Explore My</h3>
+            <h1 class="title text__center">Experience</h1>
+            <div class="flex row flex__center gap2">
+                <div class="card card__experience">
+                    <h3 class="text__center experience-sub-title">Frontend Development</h3>
+                    <div class="flex row flex__evenly gap1">
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">HTML</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">CSS</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">Angular</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">JavaScript</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">TypeScript</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">SCSS</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card__experience">
+                    <h3 class="text__center experience-sub-title">Backend Development</h3>
+                    <div class="flex row flex__evenly gap1">
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">HTML</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">CSS</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">Angular</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">JavaScript</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">TypeScript</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+
+                            <div class="flex row gap1">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h2 class="experience__text">SCSS</h2>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="projects">
+            <h3 class="section_intro text__center">Browse My Recent</h3>
+            <h1 class="title text__center">Experience</h1>
+            <div class="projects__list flex flex__evenly row gap2">
+                <div class="projects__card flex flex__center column gap1">
+                    <img src="p1.jpg" alt="" srcset="" class="projects__image__one">
+                    <h1 class="title text__center">Project One</h1>
+                    <div class="flex flex__evenly row gap1">
+                        <button class="button">GitHub</button>
+                        <button class="button">Live Demo</button>
+                    </div>
+                    
+                </div>
+                <div class="projects__card flex flex__center column gap1">
+                    <img src="p2.jpg" alt="" srcset="" class="projects__image__one">
+                    <h1 class="title text__center">Project Two</h1>
+                    <div class="flex flex__evenly row gap1">
+                        <button class="button">GitHub</button>
+                        <button class="button">Live Demo</button>
+                    </div>
+                </div>
+                <div class="projects__card flex flex__center column gap1">
+                    <img src="p3.jpg" alt="" srcset="" class="projects__image__one">
+                    <h1 class="title text__center">Project Three</h1>
+                    <div class="flex flex__evenly row gap1">
+                        <button class="button">GitHub</button>
+                        <button class="button">Live Demo</button>
+                    </div>
                 </div>
             </div>
         </section>
-
+        <section class="contacts">
+            <h3 class="section_intro text__center">Get in Touch</h3>
+            <h1 class="title text__center">Contact Me</h1>
+            <div class="flex row flex__center gap1 contacts__details">
+                <h4><i class="fa-solid fa-envelope"></i>Example@gmail.com</h4>
+                <h4><i class="fa-brands fa-linkedin-in"></i>LinkedIn</h4>
+            </div>
+        </section>
     </div>
 
 
