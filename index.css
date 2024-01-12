@@ -95,6 +95,7 @@ a {
 
 .title {
   font-size: 3rem;
+  font-weight: 700;
 }
 
 .section_intro {
@@ -103,7 +104,7 @@ a {
 
 /*Buttons*/
 .button {
-  font-weight: 600;
+  font-weight: 700;
   border: #353535 0.1rem solid;
   min-height: 30px;
   min-width: 120px;
@@ -234,21 +235,26 @@ a {
   margin: auto;
 }
 
-/*About me*/
-.about, .projects {
+.projects {
   height: 96vh;
   padding-top: 4vh;
-}
-
-.about__profile__image, .projects__image__one {
-  width: 25rem;
-  height: 25rem;
-  border-radius: 3rem;
 }
 
 .projects__image__one {
   width: 22rem;
   height: 22rem;
+  border-radius: 3rem;
+}
+
+/*About me*/
+.about {
+  height: 96vh;
+  padding-top: 4vh;
+}
+
+.about__profile__image {
+  width: 25rem;
+  height: 25rem;
   border-radius: 3rem;
 }
 
@@ -288,8 +294,25 @@ a {
 
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
+  .card {
+    height: 9rem;
+    width: 18rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .about__profile__image {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 3rem;
+  }
   .navbar__menu {
     display: none;
+  }
+  .about__page, .card__parent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .dashboard {
     display: -webkit-box;
@@ -300,16 +323,44 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .dashboard__designation {
+    font-size: 1.25rem;
+  }
   .profile {
     -webkit-clip-path: circle(50%);
             clip-path: circle(50%);
-    width: 18rem;
-    height: 18rem;
+    width: 12rem;
+    height: 12rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .header__logo {
+    font-size: 1.5rem;
   }
 }
 
+/**/
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    height: 9rem;
+    width: 18rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .about__profile__image {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 3rem;
+  }
+  .about__page, .card__parent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .navbar__menu {
     display: block;
   }
@@ -331,6 +382,13 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .header__logo {
+    font-size: 1.5rem;
+  }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -340,6 +398,13 @@ a {
   }
   .navbar__hamburger {
     display: none;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .header__logo {
+    font-size: 1.5rem;
   }
 }
 
