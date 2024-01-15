@@ -13,7 +13,7 @@ $fs_1: 1rem;
 
 $fw-400: 400;
 $fw-700: 700;
-$fw-600:600;
+$fw-600: 600;
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -62,16 +62,18 @@ a {
     &__zero__basis {
         flex-basis: 0;
     }
+    &__center {
+        justify-content: center;
+    }
+    &__evenly {
+        justify-content: space-evenly;
+    }
+    &__around {
+        justify-content: space-around;
+    }
 }
-.flex__center {
-    justify-content: center;
-}
-.flex__evenly {
-    justify-content: space-evenly;
-}
-.flex__around {
-    justify-content: space-around;
-}
+
+
 .row {
     flex-direction: row;
 }
@@ -139,53 +141,54 @@ a {
         font-size: $fs_2;
     }
 }
-.navbar__hamburger__menu {
-    display: none;
-    position: absolute;
-    background-color: #607274;
-    z-index: 9999;
-    top:0;
-    width: 100%;
-    height: 100%;
-    ul > li {
-        padding: 2rem 0;
-    }
-    > a {
-        right: 0;
+.navbar {
+    &__hamburger__menu {
+        display: none;
         position: absolute;
-    }
-}
-
-.navbar__link {
-    position: relative;
-    color: black;
-    &:hover {
-        color: #607274;
-        transition: color 3s;
-    }
-    &::after {
-        position:absolute;
-        content: '';
-        height: 4px;
+        background-color: #607274;
+        z-index: 9999;
+        top:0;
         width: 100%;
-        background: #607274;
-        left:0;
-        bottom:-10px;
-        opacity: 0;
-        pointer-events: none;
+        height: 100%;
+        ul > li {
+            padding: 2rem 0;
+        }
+        > a {
+            right: 0;
+            position: absolute;
+        }
     }
-    &:hover::after{
-        transition: opacity 3s;
-        opacity: 1;
+    &__link {
+        position: relative;
+        color: black;
+        &:hover {
+            color: #607274;
+            transition: color 3s;
+        }
+        &::after {
+            position:absolute;
+            content: '';
+            height: 4px;
+            width: 100%;
+            background: #607274;
+            left:0;
+            bottom:-10px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        &:hover::after{
+            transition: opacity 3s;
+            opacity: 1;
+        }
+    }
+    &__list {
+        padding:0;
+        margin:0;
+        list-style-type: none;
+        font-size: $fs_1_5;
     }
 }
 
-.navbar__list {
-    padding:0;
-    margin:0;
-    list-style-type: none;
-    font-size: $fs_1_5;
-}
 /*Header Section*/
 
 
@@ -210,7 +213,6 @@ a {
         border-radius: 2rem;
         border: 1px solid black;
         padding: 2rem 4rem;
-        width: 40vw;
         margin:auto;
     }
 }
@@ -255,19 +257,31 @@ a {
 .experience {
     height: 96vh;
     padding-top: 4vh;
+    &__cards {
+        border: 1px solid black;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
     &__text {
         font-size: 1.17rem;
         font-weight: bold;
     }
+    &__sub__title {
+        color: rgb(85, 85, 85);
+        font-weight: 600;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
 }
-.experience-sub-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
+
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 480px) {
+    .projects {
+        height: fit-content;
+        &__list {
+            flex-direction: column;
+        }
+    }
     .about {
         height: fit-content;
         &__page {
@@ -314,15 +328,25 @@ a {
         font-size: $fs_1_5;
     }
     .experience {
+        height: fit-content;
         &__page {
             flex-direction: column;
         }
+    }
+    .contacts__details {
+        flex-direction: column;
     }
     
 }
  /**/
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
+    .projects {
+        height: fit-content;
+        &__list {
+            flex-direction: column;
+        }
+    }
     .about {
         height: fit-content;
         &__page {
@@ -369,9 +393,13 @@ a {
         font-size: $fs_1_5;
     }
     .experience {
+        height: fit-content;
         &__page {
             flex-direction: column;
         }
+    }
+    .contacts__details {
+        flex-direction: column;
     }
 }
  
