@@ -281,6 +281,11 @@ a {
         &__list {
             flex-direction: column;
         }
+        &__image__one {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 3rem;
+        }
     }
     .about {
         height: fit-content;
@@ -288,8 +293,8 @@ a {
             flex-direction:  column;
         }
         &__profile__image {
-            width: 18rem;
-            height: 18rem;
+            width: 14rem;
+            height: 14rem;
             border-radius: 3rem;
         }
     }
@@ -317,8 +322,8 @@ a {
     }
     .profile {
         clip-path: circle(50%);
-        width: 12rem;
-        height: 12rem;
+        width: 14rem;
+        height: 14rem;
     }
     .title {
         font-size: $fs_2;
@@ -345,6 +350,11 @@ a {
         height: fit-content;
         &__list {
             flex-direction: column;
+        }
+        &__image__one {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 3rem;
         }
     }
     .about {
@@ -378,8 +388,8 @@ a {
     }
     .profile {
         clip-path: circle(50%);
-        width: 25rem;
-        height: 25rem;
+        width: 18rem;
+        height: 18rem;
     }
     .dashboard {
         display: flex;
@@ -447,4 +457,12 @@ a {
     .navbar__hamburger {
             display: none;
     }
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        margin: 0 5%;
+    }
+    
+
 }
