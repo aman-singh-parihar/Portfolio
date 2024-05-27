@@ -26,82 +26,82 @@
 
 <body>
     <div class="container">
-        <header class="header flex row flex__evenly">
+        <header class="header flex flex__row flex__evenly">
             <div class="header__logo">Aman Singh Parihar</div>
             <nav class="navbar__hamburger">
                 <a onclick="Show()"><i class="fa-solid fa-bars"></i></a>
             </nav>
-            <nav class="navbar__hamburger__menu" id="hamburger__menu" >
+            <nav class="navbar__menu__hamburger" id="hamburger__menu" >
                 <a onclick="Hide()"><i class="fa-solid fa-xmark"></i></i></a>
-                <ul class="navbar__list flex column flex__center gap1">
+                <ul class="navbar__list flex flex__column flex__center gap1">
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">About</a>
+                        <a onclick="Hide()" class="navbar__link" href="#about">About</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Experience</a>
+                        <a onclick="Hide()" class="navbar__link" href="#experience">Experience</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Projects</a>
+                        <a onclick="Hide()" class="navbar__link" href="#projects">Projects</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Contact</a>
+                        <a onclick="Hide()" class="navbar__link" href="#contacts">Contact</a>
                     </li>
                 </ul>
             </nav>
             <nav class="navbar__menu">
-                <ul class="navbar__list flex row flex__center gap1">
+                <ul class="navbar__list flex flex__row flex__center gap1">
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">About</a>
+                        <a class="navbar__link" href="#about">About</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Experience</a>
+                        <a class="navbar__link" href="#experience">Experience</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Projects</a>
+                        <a class="navbar__link" href="#projects">Projects</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Contact</a>
+                        <a class="navbar__link" href="#contacts">Contact</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <section class="dashboard flex row flex__center gap1">
+        <section class="dashboard flex flex__row flex__center gap1" id="dashboard">
             <div>
                 <img src="img.jpg" alt="profile-picture" srcset="" class="profile">
             </div>
-            <div class="flex column space__evenly">
+            <div class="flex flex__column space__evenly">
                 <div class="p__15">
                     <h3 class="intro text__center">Hello, I'm</h3>
                     <h2 class="title text__center">Aman Singh Parihar</h2>
                     <h1 class="dashboard__designation text__center">Full Stack Engineer</h1>
                 </div>
-                <div class="p__15">
-                    <button class="button btn__resume">Download Resume</button>
-                    <button class="button btn__contact">Contact Info</button>
+                <div class="p__15 dashboard__button">
+                    <button class="button button__resume">Download Resume</button>
+                    <button class="button button__contact">Contact Info</button>
                 </div>
                 <div class="p__15">
-                    <a><i class="fa-brands fa-linkedin fa-2xl"></i></i></a>
-                    <a><i class="fa-brands fa-github fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/aman-singh-parihar-0b1630107/"><i class="fa-brands fa-linkedin fa-2xl"></i></i></a>
+                    <a href="https://github.com/aman-singh-parihar"><i class="fa-brands fa-github fa-2xl"></i></a>
                 </div>
             </div>
 
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <h3 class="section_intro text__center">Get To Know More</h3>
             <h1 class="title text__center">About Me</h1>
-            <div class="mt__2rem about__page  flex row flex__evenly gap2">
+            <div class="mt__2rem about__page  flex flex__row flex__evenly gap2">
                 <img src="img.jpg" alt="" srcset="" class="about__profile__image">
-                <div class="flex column flex__center gap1 flex__zero__basis">
-                    <div class="card__parent flex row flex__center gap1">
-                        <div class="card">
+                <div class="flex flex__column flex__center gap1 flex__zero__basis">
+                    <div class="card__parent flex flex__row flex__center gap1">
+                        <div class="card__about">
                             <i class="fa-solid fa-medal"></i>
-                            <h2>Experience</h2>
+                            <h2 class="experience__text">Experience</h2>
                             <p>7+ Years</p>
                             <p>Full Stack Engineer</p>
                         </div>
-                        <div class="card">
+                        <div class="card__about">
                             <i class="fa-solid fa-users"></i>
-                            <h2>Education</h2>
+                            <h2 class="experience__text">Education</h2>
                             <p>B.E(CSE)</p>
                         </div>
                     </div>
@@ -113,22 +113,22 @@
             </div>
 
         </section>
-        <section class="experience">
+        <section class="experience" id="experience">
             <h3 class="text__center">Explore My</h3>
             <h1 class="title text__center">Experience</h1>
-            <div class="experience__page mt__2rem flex row flex__center gap2">
+            <div class="experience__page mt__2rem flex flex__row flex__center gap2">
                 <div class="experience__cards">
                     <h3 class="text__center experience__sub__title">Frontend Development</h3>
-                    <div class="card__list flex row flex__evenly gap1 mt__2rem">
+                    <div class="card__list flex flex__row flex__evenly gap1 mt__2rem">
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">HTML</h2>
                                     <p>Experienced</p>
                                 </div>
                             </div>
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">CSS</h2>
@@ -137,14 +137,14 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">Angular</h2>
                                     <p>Experienced</p>
                                 </div>
                             </div>
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">JavaScript</h2>
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">TypeScript</h2>
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">SCSS</h2>
@@ -173,16 +173,16 @@
                 </div>
                 <div class="experience__cards">
                     <h3 class="text__center experience__sub__title">Backend Development</h3>
-                    <div class="card__list flex row flex__evenly gap1 mt__2rem">
+                    <div class="card__list flex flex__row flex__evenly gap1 mt__2rem">
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">HTML</h2>
                                     <p>Experienced</p>
                                 </div>
                             </div>
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">CSS</h2>
@@ -191,14 +191,14 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">Angular</h2>
                                     <p>Experienced</p>
                                 </div>
                             </div>
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">JavaScript</h2>
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex row gap1">
+                            <div class="flex flex__row gap1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">TypeScript</h2>
@@ -215,7 +215,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex row gap1 mt__2rem">
+                            <div class="flex flex__row gap1 mt__2rem">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
                                     <h2 class="experience__text">SCSS</h2>
@@ -228,43 +228,43 @@
 
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h3 class="section_intro text__center">Browse My Recent</h3>
             <h1 class="title text__center">Projects</h1>
-            <div class="mt__2rem projects__list flex flex__evenly row gap2">
-                <div class="projects__card flex flex__center column gap1">
+            <div class="mt__2rem projects__list flex flex__evenly flex__row gap2">
+                <div class="projects__card flex flex__center flex__column gap1">
                     <img src="p1.jpg" alt="" srcset="" class="projects__image__one">
                     <h1 class="title text__center">Project One</h1>
-                    <div class="flex flex__evenly row gap1">
+                    <div class="flex flex__evenly flex__row gap1">
                         <button class="button">GitHub</button>
                         <button class="button">Live Demo</button>
                     </div>
                     
                 </div>
-                <div class="projects__card flex flex__center column gap1">
+                <div class="projects__card flex flex__center flex__column gap1">
                     <img src="p2.jpg" alt="" srcset="" class="projects__image__one">
                     <h1 class="title text__center">Project Two</h1>
-                    <div class="flex flex__evenly row gap1">
+                    <div class="flex flex__evenly flex__row gap1">
                         <button class="button">GitHub</button>
                         <button class="button">Live Demo</button>
                     </div>
                 </div>
-                <div class="projects__card flex flex__center column gap1">
+                <div class="projects__card flex flex__center flex__column gap1">
                     <img src="p3.jpg" alt="" srcset="" class="projects__image__one">
                     <h1 class="title text__center">Project Three</h1>
-                    <div class="flex flex__evenly row gap1">
+                    <div class="flex flex__evenly flex__row gap1">
                         <button class="button">GitHub</button>
                         <button class="button">Live Demo</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <h3 class="section_intro text__center">Get in Touch</h3>
             <h1 class="title text__center">Contact Me</h1>
-            <div class="flex row flex__center gap1 contacts__details">
-                <h4><i class="fa-solid fa-envelope"></i>Example@gmail.com</h4>
-                <h4><i class="fa-brands fa-linkedin-in"></i>LinkedIn</h4>
+            <div class="flex flex__row flex__center gap1 contacts__details">
+                <i class="fa-solid fa-envelope"></i><h4></h4>Example@gmail.com</h4>
+                <i class="fa-brands fa-linkedin-in"></i><h4></h4>LinkedIn</h4>
             </div>
         </section>
     </div>
