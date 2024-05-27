@@ -29,6 +29,11 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
+.pr {
+    &__08rem{
+        padding-right: 0.8rem;
+    }
+}
 .mt {
     &__1rem{
         margin-top:1 rem;
@@ -207,6 +212,7 @@ a {
     }
 }
 
+/*Contacts*/
 .contacts {
     height: 95vh;
     padding-top: 5vh;
@@ -215,7 +221,7 @@ a {
         border: 1px solid black;
         padding: 2rem 4rem;
         margin:auto;
-        width: 25rem;
+        width: 30rem;
     }
 }
 .projects {
